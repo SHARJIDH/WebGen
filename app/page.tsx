@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { Wand2 } from 'lucide-react';
+import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
 
 const Home = () => {
   const [prompt, setPrompt] = useState('');
@@ -13,9 +14,15 @@ const Home = () => {
       router.push(`/builder?prompt=${encodeURIComponent(prompt)}`);
     }
   };
+  const placeholders = [
+    
+    "Describe the website you want to build",
+    "Get your website built step by step",
+    "Generate Website Plan",
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-black from-gray-900 to-gray-800 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         <div className="text-center mb-8">
           <div className="flex justify-center mb-4">
@@ -29,7 +36,7 @@ const Home = () => {
           </p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* <form onSubmit={handleSubmit} className="space-y-4">
           <div className="bg-gray-800 rounded-lg shadow-lg p-6">
             <textarea
               value={prompt}
@@ -44,7 +51,12 @@ const Home = () => {
               Generate Website Plan
             </button>
           </div>
-        </form>
+        </form> */}
+        <PlaceholdersAndVanishInput
+        placeholders={placeholders}
+        onChange={(e) => setPrompt(e.target.value)}
+        onSubmit={handleSubmit}
+      />
       </div>
     </div>
   );
