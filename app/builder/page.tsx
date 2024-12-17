@@ -134,7 +134,7 @@ const Builder: React.FC<BuilderProps> = () => {
                 }
 
                 console.log('Mount structure:', mountStructure);
-                await webcontainer.mount(mountStructure);
+                await webcontainer?.mount(mountStructure);
                 console.log('Files mounted successfully');
             } catch (error) {
                 console.error('Error mounting files:', error);

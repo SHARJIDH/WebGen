@@ -25,9 +25,9 @@ const Home = () => {
     <div className="min-h-screen bg-black from-gray-900 to-gray-800 flex items-center justify-center p-4">
       <div className="max-w-2xl w-full">
         <div className="text-center mb-8">
-          <div className="flex justify-center mb-4">
+          {/* <div className="flex justify-center mb-4">
             <Wand2 className="w-12 h-12 text-blue-400" />
-          </div>
+          </div> */}
           <h1 className="text-4xl font-bold text-gray-100 mb-4">
             Website Builder AI
           </h1>
