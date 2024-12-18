@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/nextjs": "^6.9.3",
     "@google/generative-ai": "^0.21.0",
     "@monaco-editor/react": "^4.6.0",
     "@tabler/icons-react": "^3.26.0",
@@ -21,7 +22,7 @@
     "framer-motion": "^11.15.0",
     "lucide-react": "^0.344.0",
     "my-next-app": "file:",
-    "next": "14.0.4",
+    "next": "^14.1.0",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.5.5",

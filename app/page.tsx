@@ -6,6 +6,7 @@ import { Wand2 } from 'lucide-react';
 import { PlaceholdersAndVanishInput } from '@/components/ui/placeholders-and-vanish-input';
 import { FeaturesSection } from '@/components/features';
 import { motion } from 'framer-motion';
+import AuthButton from '@/components/AuthButton';
 
 const Home = () => {
   const [prompt, setPrompt] = useState('');
@@ -33,6 +34,7 @@ const Home = () => {
 
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden">
+      <AuthButton />
       {/* Animated background elements */}
       {floatingElements.map((element) => (
         <motion.div
