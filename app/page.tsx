@@ -86,7 +86,7 @@ const Home = () => {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.2 }}
             >
-              Describe your dream website, and we'll help you build it step by step
+            Describe your dream website, and we&apos;ll help you build it step by step
             </motion.p>
           </div>
 

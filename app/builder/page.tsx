@@ -91,7 +91,7 @@ const Builder: React.FC<BuilderProps> = () => {
                 }))
             );
         }
-    }, [steps]);
+    }, [steps,files]);
 
     useEffect(() => {
         if (!webcontainer || !files.length) return;
@@ -200,7 +200,7 @@ const Builder: React.FC<BuilderProps> = () => {
     useEffect(() => {
         if (!prompt) return;
         init();
-    }, [prompt]);
+    }, [prompt,init]);
 
     const handleSubmit = async () => {
         if (!userPrompt) return;
