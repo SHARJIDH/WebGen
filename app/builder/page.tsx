@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { StepsList } from '@/components/StepsList';
 import { FileExplorer } from '@/components/FileExplorer';
@@ -292,4 +292,10 @@ const Builder: React.FC<BuilderProps> = () => {
     );
 };
 
-export default Builder;
+const BuilderPage = () => (
+    <Suspense fallback={<Loader />}>
+        <Builder />
+    </Suspense>
+);
+
+export default BuilderPage;
